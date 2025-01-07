@@ -12,7 +12,7 @@ export const PresentationCard = ({
         {children}
         <h1 className="font-semibold font-josefin mt-2">{title}</h1>
         <p className=" font-josefin m-3 text-center">{description}</p>
-        <button className="font-bold font-josefin bg-denim hover:bg-camel text-white hover:scale-110 p-2 rounded-lg">
+        <button className="font-bold font-josefin bg-astrosNavy hover:bg-camel text-white hover:scale-110 p-2 rounded-lg">
           {buttonName}
         </button>
       </div>

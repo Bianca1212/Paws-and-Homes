@@ -8,10 +8,7 @@ const NavigationButton = ({ path, onClick, children }) => {
         onClick={onClick}
         className="p-2 font-josefin hover:scale-110 cursor-pointer text-white text-sm"
       >
-        {/* <Link */}
-
         {children}
-        {/* </Link> */}
       </button>
     </>
   );

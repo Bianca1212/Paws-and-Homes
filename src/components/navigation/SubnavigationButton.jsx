@@ -4,7 +4,7 @@ export const SubnavigationButton = ({ children }) => {
   return (
     <>
       <button className="text-sm font-cromisom whitespace-nowrap">
-        {children}{" "}
+        {children}
       </button>
     </>
   );

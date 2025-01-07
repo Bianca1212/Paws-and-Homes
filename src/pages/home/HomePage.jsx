@@ -11,7 +11,7 @@ export const HomePage = () => {
           alt="Cat-and-Dog"
           className="w-full object-cover h-48 sm:h-64 md:h-72 lg:h-144"
         />
-        <section className="flex flex-col items-center justify-center bg-eggshell gap-6 py-16 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg rounded-xl">
+        <section className="flex flex-col items-center justify-center bg-eggshell gap-6 py-16 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
           <h1 className="text-2xl sm:text-3xl font-josefin font-semibold text-midnightBlue drop-shadow-md text-center">
             WELCOME TO
           </h1>
@@ -34,12 +34,15 @@ export const HomePage = () => {
             care—we also collaborate closely with animal adoption associations
             to help homeless pets find their forever homes.
           </p>
-          <Button className="font-josefin bg-midnightBlue hover:bg-camel p-3 text-white font-semibold my-5 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg">
+          <Button
+            path={"/appointment"}
+            className="font-josefin bg-midnightBlue hover:bg-camel p-3 text-white font-semibold my-5 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
+          >
             MAKE AN APPOINTMENT
           </Button>
         </section>
 
-        <section className="flex flex-col items-center justify-center gap-7 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg rounded-xl">
+        <section className="flex flex-col items-center justify-center gap-7 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
           <h1 className="text-2xl sm:text-2xl font-josefin font-semibold text-midnightBlue drop-shadow-md">
             PREVENTIVE PET CARE AND VETERINARY SERVICES
           </h1>
@@ -61,7 +64,7 @@ export const HomePage = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="midnightBlue"
+                fill="#002D62"
                 width="90px"
                 height="90px"
                 viewBox="0 0 24 24"
@@ -89,7 +92,7 @@ export const HomePage = () => {
               >
                 <path
                   d="M245.2 134.289C294.12 73.9855 219.025 82.2174 208.126 76.763C204.296 74.849 200.528 56.3705 192.005 60.6375C178.88 67.2036 179.995 101.383 178.571 112.785C177.798 118.991 169.133 127.877 166.285 134.289C161.739 144.521 156.744 156.692 148.393 169.402C140.043 182.113 122.592 191.967 113.857 201.681C76.682 243.002 92.6204 291.579 133.435 322.992C174.716 354.764 347.131 342.906 298.399 269.769"
-                  stroke="#000000"
+                  stroke="#8B4000"
                   strokeOpacity="0.9"
                   strokeWidth="16"
                   strokeLinecap="round"
@@ -97,7 +100,7 @@ export const HomePage = () => {
                 />
                 <path
                   d="M225.903 162.283C238.018 206.627 220.627 252.936 220.627 296.357C220.627 301.354 230.543 296.532 235.401 297.425"
-                  stroke="#000000"
+                  stroke="#8B4000"
                   strokeOpacity="0.9"
                   strokeWidth="16"
                   strokeLinecap="round"
@@ -105,7 +108,7 @@ export const HomePage = () => {
                 />
                 <path
                   d="M162.667 208.879C172.419 210.315 181.319 217.474 188.222 224.166C222.582 257.481 178.688 279.87 176.257 291.647C175.708 294.311 187.035 296.145 189.31 296.389"
-                  stroke="#000000"
+                  stroke="#8B4000"
                   strokeOpacity="0.9"
                   strokeWidth="16"
                   strokeLinecap="round"
@@ -113,7 +116,7 @@ export const HomePage = () => {
                 />
                 <path
                   d="M211.536 62.994C218.161 56.7795 219.425 67.6568 220.627 73.6378"
-                  stroke="#000000"
+                  stroke="#CC5500	"
                   strokeOpacity="0.9"
                   strokeWidth="16"
                   strokeLinecap="round"
@@ -239,7 +242,7 @@ export const HomePage = () => {
           </div>
         </section>
 
-        <section className="bg-midnightBlue flex flex-row items-center justify-center gap-3 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg rounded-xl">
+        <section className="bg-midnightBlue flex flex-row items-center justify-center gap-3 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
           <img
             src="./images/about-team.jpg"
             alt="Cat-and-Dog"
@@ -260,7 +263,7 @@ export const HomePage = () => {
           </div>
         </section>
 
-        <section className="bg-eggshell flex flex-row items-center justify-center gap-7 py-16 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg rounded-xl">
+        <section className="bg-eggshell flex flex-row items-center justify-center gap-7 py-16 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
           <div className="flex flex-col items-center justify-center gap-7">
             <h1 className="mt-20 text-2xl sm:text-3xl font-josefin font-semibold text-midnightBlue drop-shadow-md">
               ADOPTION PARTNERSHIPS
