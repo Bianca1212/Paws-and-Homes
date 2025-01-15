@@ -14,7 +14,7 @@ export const NavigationButtonWithMenu = ({
       <NavigationButton onClick={toggleMenu}>
         {title}
         {isMenuOpen && (
-          <div className="absolute font-josefin bg-white text-midnightBlue p-2 gap-2 mt-2 shadow-lg rounded flex flex-col w-50">
+          <div className="absolute font-josefin text-lowesBlue bg-white p-2 gap-2 mt-2 shadow-lg rounded flex flex-col w-50">
             {menuItems.map((item, index) => (
               <Link to={item.url} key={index}>
                 <SubnavigationButton>{item.name}</SubnavigationButton>

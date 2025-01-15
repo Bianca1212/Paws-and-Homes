@@ -12,7 +12,7 @@ export const MissionAndValues = () => {
             alt="Background Image"
             className="object-cover w-full h-96"
           />
-          <div className="absolute right-20 top-1/4 max-w-lg flex flex-col gap-2">
+          <div className="absolute lg:right-20 top-1/4 max-w-lg flex flex-col gap-2">
             <p className="font-bold font-josefin text-beige text-2xl text-center">
               We are here to provide compassionate care and quality veterinary
               services to ensure every pet`s health and happiness.

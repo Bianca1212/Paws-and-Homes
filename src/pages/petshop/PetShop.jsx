@@ -1,16 +1,24 @@
+import { PetShopSection } from "../../components/PetShopSection";
 import { NavigationLayout } from "../../layouts/NavigationLayout";
 
 export const PetShop = () => {
-  4;
   return (
     <>
       <NavigationLayout>
-        {" "}
-        <img
-          src="./images/petshop-welcome.jpg"
-          alt="Cat-and-Dog"
-          className="w-full object-cover h-48 sm:h-64 md:h-72 lg:h-144"
-        />
+        <div className="flex flexc-col justify-center items-center mt-20 gap-10">
+          <PetShopSection
+            title={"Pet Food"}
+            src={"/images/pet-food.jpg"}
+            alt={"Pet Food"}
+            path={"/food"}
+          />
+          <PetShopSection
+            title={"Pet Toys and Accessories"}
+            src={"/images/pet-toys.jpg"}
+            alt={"Pet Toys"}
+            path={"/toys"}
+          />
+        </div>
       </NavigationLayout>
     </>
   );

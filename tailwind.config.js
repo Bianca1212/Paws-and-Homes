@@ -45,6 +45,9 @@ export default {
         lightOrange: "#FFD580",
         limeGreen: "#32CD32",
         dodgersBlue: "#005A9C",
+        sapphire: "#52B2BF",
+        aliceBlue: "#F0F8FF",
+        lowesBlue: "#004792",
       },
       height: {
         128: "32rem", // 512px

@@ -7,15 +7,15 @@ export const AdoptionPage = () => {
     <>
       <NavigationLayout>
         <img
-          src="./images/home-bg.jpg"
+          src="./images/adoption-bg.jpg"
           alt="Cat-and-Dog"
           className="w-full object-cover h-48 sm:h-64 md:h-72 lg:h-96"
         />
         <div className="flex flex-col bg-narvik">
-          <h1 className="text-center mt-12 text-xl sm:text-3xl font-josefin font-semibold text-gray-800">
-            Different Ways to Help Our Furry Friends
+          <h1 className="text-center mt-12 text-xl sm:text-2xl font-josefin font-semibold text-gray-800">
+            DIFFERENT WAYS TO HELP OUR FURRY FRIENDS
           </h1>
-          <section className="flex flex-col sm:flex-row gap-15 mb-20 mt-10 justify-around">
+          <section className="flex flex-col sm:flex-row gap-15 mb-20 mt-10 justify-around items-center">
             <PresentationCard
               title={"Give a Donation"}
               description={
@@ -151,7 +151,7 @@ export const AdoptionPage = () => {
               </svg>
             </PresentationCard>
           </section>
-          <section className="bg-columbiaBlue flex flex-row items-center justify-center gap-7 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg rounded-xl">
+          <section className="bg-columbiaBlue flex flex-col lg:flex-row items-center justify-center gap-7 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg rounded-xl">
             <div className="flex flex-col items-center justify-center gap-7">
               <h1 className="mt-20 text-2xl sm:text-3xl font-josefin font-semibold text-midnightBlue drop-shadow-md">
                 ADOPT A CAT
@@ -173,17 +173,17 @@ export const AdoptionPage = () => {
             <img
               src="./images/cat.jpg"
               alt="Cat-and-Dog"
-              className="mr-20 w-full object-cover h-48 sm:h-64 md:h-72 lg:h-96 rounded-full shadow-lg"
+              className="lg:mr-20 w-full object-cover h-48 sm:h-64 md:h-72 lg:h-96 rounded-full shadow-lg"
             />
           </section>
-          <section className="bg-beige flex flex-row items-center justify-center gap-7 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg rounded-xl">
+          <section className="bg-beige flex flex-col lg:flex-row items-center justify-center gap-7 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg rounded-xl">
             <img
               src="./images/dog.jpg"
               alt="Cat-and-Dog"
-              className="mr-20 w-full object-cover h-48 sm:h-64 md:h-72 lg:h-96 rounded-full shadow-lg"
+              className="lg:mr-20 w-full object-cover h-48 sm:h-64 md:h-72 lg:h-96 rounded-full shadow-lg"
             />
             <div className="flex flex-col items-center justify-center gap-7">
-              <h1 className="mt-20 text-2xl sm:text-3xl font-josefin font-semibold text-chocolate drop-shadow-md">
+              <h1 className="mt-2 lg:mt-20 text-2xl sm:text-3xl font-josefin font-semibold text-chocolate drop-shadow-md">
                 ADOPT A DOG
               </h1>
               <p className="text-center font-josefin w-full text-gray-800 text-xl drop-shadow-md">

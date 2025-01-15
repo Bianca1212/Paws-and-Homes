@@ -5,7 +5,7 @@ export const FAQPage = () => {
   return (
     <>
       <NavigationLayout>
-        <div className="w-full h-60 flex flex-row justify-center items-center bg-white gap mt-10">
+        <div className="w-full h-60 flex flex-col lg:flex-row justify-center items-center bg-white gap-3 mt-10">
           <div className="flex flex-col gap-5">
             <h1 className="text-xl sm:text-3xl mx-20 text-center text-gray-800 font-josefin">
               Find Answers To
@@ -26,7 +26,6 @@ export const FAQPage = () => {
               .
             </h2>
           </div>
-
           <img
             src="./images/faq.jpg"
             alt="FAQ"

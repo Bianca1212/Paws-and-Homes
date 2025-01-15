@@ -6,6 +6,10 @@ import { MissionAndValues } from "../../pages/about/MissionAndValues";
 import { AppointmentForm } from "../../pages/appointment/AppointmentForm";
 import { FAQPage } from "../../pages/faq/FAQPage";
 import { PetShop } from "../../pages/petshop/PetShop";
+import { Team } from "../../pages/about/team/Team";
+import { Gallery } from "../../pages/about/Gallery";
+import { PetFood } from "../../pages/petshop/PetFood";
+import { PetToys } from "../../pages/petshop/PetToys";
 
 export const AppRouter = () => {
   const router = createBrowserRouter([
@@ -21,7 +25,11 @@ export const AppRouter = () => {
     { path: "/mission&values", element: <MissionAndValues /> },
     { path: "/appointment", element: <AppointmentForm /> },
     { path: "/faq", element: <FAQPage /> },
-    { path: "/petshop", element: <PetShop /> },
+    { path: "/e-shop", element: <PetShop /> },
+    { path: "/food", element: <PetFood /> },
+    { path: "/toys", element: <PetToys /> },
+    { path: "/team", element: <Team /> },
+    { path: "/gallery", element: <Gallery /> },
   ]);
   return (
     <>

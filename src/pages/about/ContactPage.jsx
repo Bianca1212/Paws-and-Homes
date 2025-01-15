@@ -8,10 +8,10 @@ export const ContactPage = () => {
     <>
       <NavigationLayout>
         <section className="flex flex-col gap-5 items-center py-4">
-          <h1 className="mt-10 text-2xl sm:text-3xl font-semibold text-midnightBlue text-center drop-shadow-md">
+          <h1 className="mt-10 text-2xl sm:text-3xl font-semibold text-lowesBlue text-center drop-shadow-md">
             CONTACT US
           </h1>
-          <p className="mt-8 text-xl sm:text-2xl font-josefin font-semibold text-midnightBlue text-center drop-shadow-md">
+          <p className="mt-8 text-xl sm:text-2xl font-josefin font-semibold text-lowesBlue text-center drop-shadow-md">
             Any questions or remarks? Just write us a message!
           </p>
           <div className="flex flex-col gap-10 justify-center">
@@ -20,10 +20,10 @@ export const ContactPage = () => {
             <textarea
               placeholder="Write here..."
               rows={10}
-              className="font-josefin sm:w-96 sm:h-14 p-4 cursor-pointer border-2 border-gray-500 border-midnightBlue text-center rounded-md placeholder:font-bold hover:placeholder:text-white hover:placeholder:font-bold focus:outline-none"
+              className="font-josefin sm:w-96 sm:h-14 p-4 cursor-pointer border-2 border-gray-500 border-lowesBlue text-center rounded-md placeholder:font-bold hover:placeholder:text-white hover:placeholder:font-bold focus:outline-none"
             />
           </div>
-          <Button className="bg-astrosNavy text-white hover:bg-chocolate p-3 rounded-md font-semibold">
+          <Button className="bg-lowesBlue text-white hover:bg-chocolate p-3 rounded-md font-semibold">
             Submit
           </Button>
         </section>
@@ -33,7 +33,7 @@ export const ContactPage = () => {
           <h2 className="text-xl sm:text-2xl text-gray-800">
             Contact Information
           </h2>
-          <div className="flex gap-20">
+          <div className="flex flex-col lg:flex-row gap-20">
             <ContactDiv>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

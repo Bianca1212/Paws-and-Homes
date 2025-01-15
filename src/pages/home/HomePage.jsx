@@ -9,13 +9,13 @@ export const HomePage = () => {
         <img
           src="./images/homepage-img.jpg"
           alt="Cat-and-Dog"
-          className="w-full object-cover h-48 sm:h-64 md:h-72 lg:h-144"
+          className="w-full object-cover h-48 sm:h-64 md:h-72 lg:h-128"
         />
         <section className="flex flex-col items-center justify-center bg-eggshell gap-6 py-16 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
           <h1 className="text-2xl sm:text-3xl font-josefin font-semibold text-midnightBlue drop-shadow-md text-center">
             WELCOME TO
           </h1>
-          <h2 className="text-4xl sm:text-4xl font-josefin font-bold text-chocolate drop-shadow-lg text-center">
+          <h2 className="text-2xl sm:text-4xl font-josefin font-bold text-chocolate drop-shadow-lg text-center">
             PAWS & HOMES VETERINARY CLINIC
           </h2>
           <p className="text-center font-josefin w-full sm:w-3/4 md:w-2/3 lg:w-1/2 text-gray-800 text-xl leading-relaxed drop-shadow-md">
@@ -43,7 +43,7 @@ export const HomePage = () => {
         </section>
 
         <section className="flex flex-col items-center justify-center gap-7 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
-          <h1 className="text-2xl sm:text-2xl font-josefin font-semibold text-midnightBlue drop-shadow-md">
+          <h1 className="text-2xl sm:text-3xl font-josefin font-bold text-chocolate drop-shadow-lg text-center">
             PREVENTIVE PET CARE AND VETERINARY SERVICES
           </h1>
           <p className="text-center font-josefin w-full sm:w-3/4 md:w-2/3 lg:w-1/2 text-gray-800 text-xl leading-relaxed drop-shadow-md">
@@ -54,7 +54,7 @@ export const HomePage = () => {
             care about needs experienced diagnostics, orthopedic services, and
             more.
           </p>
-          <div className="flex flex-col sm:flex-row gap-10 justify-center sm:justify-around">
+          <div className="flex flex-col lg:flex-row gap-10 justify-center sm:justify-around">
             <PresentationCard
               title={"Diagnostic"}
               description={
@@ -242,13 +242,13 @@ export const HomePage = () => {
           </div>
         </section>
 
-        <section className="bg-midnightBlue flex flex-row items-center justify-center gap-3 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
+        <section className="bg-midnightBlue flex flex-col lg:flex-row items-center justify-center gap-3 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
           <img
             src="./images/about-team.jpg"
             alt="Cat-and-Dog"
-            className="ml-20 w-full object-cover h-48 sm:h-64 md:h-72 lg:h-96 rounded-full shadow-lg"
+            className="md:ml-20 w-full object-cover h-42 sm:h-64 md:h-72 lg:h-96 rounded-full shadow-lg"
           />
-          <div className="flex flex-row md:flex-col items-center justify-center gap-7">
+          <div className="flex flex-col md:flex-row md:flex-col items-center justify-center gap-7">
             <h1 className="mt-10 text-2xl sm:text-3xl font-josefin font-semibold text-white drop-shadow-lg">
               MEET OUR TEAM
             </h1>
@@ -257,15 +257,18 @@ export const HomePage = () => {
               animal lovers dedicated to providing your animals the best in
               veterinary care.
             </p>
-            <Button className="font-josefin bg-camel hover:bg-midnightBlue p-3 text-white font-semibold mt-5 mb-10 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg">
+            <Button
+              path={"/team"}
+              className="font-josefin bg-camel hover:bg-midnightBlue p-3 text-white font-semibold mt-5 mb-10 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
+            >
               GET TO KNOW US
             </Button>
           </div>
         </section>
 
-        <section className="bg-eggshell flex flex-row items-center justify-center gap-7 py-16 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
+        <section className="bg-eggshell flex flex flex-col lg:flex-row items-center justify-center gap-7 py-16 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
           <div className="flex flex-col items-center justify-center gap-7">
-            <h1 className="mt-20 text-2xl sm:text-3xl font-josefin font-semibold text-midnightBlue drop-shadow-md">
+            <h1 className="mt-5 md:mt-20 text-2xl sm:text-3xl font-josefin font-semibold text-midnightBlue drop-shadow-md">
               ADOPTION PARTNERSHIPS
             </h1>
             <p className="text-center font-josefin w-full text-gray-800 text-xl drop-shadow-md">
@@ -283,8 +286,8 @@ export const HomePage = () => {
           </div>
           <img
             src="./images/adoption-img.jpg"
-            alt="Cat-and-Dog"
-            className="mr-20 w-full object-cover h-48 sm:h-64 md:h-72 lg:h-96 rounded-full shadow-lg"
+            alt="Adoption"
+            className="md:mr-20 w-full object-cover h-48 sm:h-64 md:h-72 lg:h-96 rounded-full shadow-lg"
           />
         </section>
         <section className="flex items-center justify-end">
