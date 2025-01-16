@@ -29,17 +29,21 @@ export const Member = ({ name, images, description }) => {
   };
   return (
     <>
-      <div className="border-2 border-gray-200 rounded-lg shadow-lg flex flex-col items-center p-4 bg-white text-center">
+      <div className="border-2 border-gray-200 rounded-lg shadow-lg flex flex-col items-center p-3 bg-blue-100 text-center">
         <h1 className="text-xl font-semibold text-gray-900">{name}</h1>
-        <img
-          src={images[currentImageIndex]}
-          alt={name}
-          onClick={handleImageClick}
-          className={`w-29 h-72 object-cover my-4 transition-all duration-1000 ease-in-out ${
-            isImageChanging ? "opacity-0 scale-95" : "opacity-100 scale-100"
-          }`}
-        />
-        <p className="text-gray-800 mt-2 mx-5">{description}</p>
+        <div className="flex flex-col md:flex-row items-center">
+          <img
+            src={images[currentImageIndex]}
+            alt={name}
+            onClick={handleImageClick}
+            className={`w-29 h-72 cursor-pointer object-cover my-4 transition-all duration-1000 ease-in-out ${
+              isImageChanging ? "opacity-0 scale-95" : "opacity-100 scale-100"
+            }`}
+          />
+          <p className="text-gray-800 mt-2 mx-5 max-w-md break-words">
+            {description}
+          </p>
+        </div>
       </div>
     </>
   );

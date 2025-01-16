@@ -60,14 +60,14 @@ export const AppointmentForm = () => {
     <>
       <NavigationLayout>
         <div className="w-full h-screen bg-lightBlue relative">
-          <div className="px-5 w-2/3 h-3/4 bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 flex flex-row gap-5 items-center rounded-md shadow-lg">
+          <div className="px-5 md:w-2/3 md:h-3/4 bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 flex flex-row gap-5 items-center rounded-md shadow-lg">
             <img
               src="./images/form-img.jpg"
               alt="Vision"
-              className="w-30 h-48 sm:h-64 md:h-72 lg:h-80"
+              className="hidden lg:block w-30 h-48 sm:h-64 md:h-72 lg:h-80"
             />
             <div className="w-full flex flex-col justify-center items-center">
-              <h1 className="text-2xl text-gray-700 font-semibold">
+              <h1 className="mt-3 text-lg text-center md:text-2xl text-gray-700 font-semibold">
                 Book an appointment for your pet
               </h1>
               <form className="p-10 flex flex-wrap justify-center items-center gap-5">
@@ -146,7 +146,7 @@ export const AppointmentForm = () => {
               </form>
               <div className="flex justify-center">
                 <Button
-                  className="p-2 bg-lightBlue rounded-md text-gray-800 hover:scale-110 hover:bg-blue-200"
+                  className="mb-3 p-2 bg-lightBlue rounded-md text-gray-800 hover:scale-110 hover:bg-blue-200"
                   onClick={openModal}
                 >
                   Select a schedule

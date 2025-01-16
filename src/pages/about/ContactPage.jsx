@@ -11,7 +11,7 @@ export const ContactPage = () => {
           <h1 className="mt-10 text-2xl sm:text-3xl font-semibold text-lowesBlue text-center drop-shadow-md">
             CONTACT US
           </h1>
-          <p className="mt-8 text-xl sm:text-2xl font-josefin font-semibold text-lowesBlue text-center drop-shadow-md">
+          <p className="m-8 md:m-0 mt-8 text-xl sm:text-2xl font-josefin font-semibold text-lowesBlue text-center drop-shadow-md">
             Any questions or remarks? Just write us a message!
           </p>
           <div className="flex flex-col gap-10 justify-center">

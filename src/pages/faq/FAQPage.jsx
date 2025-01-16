@@ -7,7 +7,7 @@ export const FAQPage = () => {
       <NavigationLayout>
         <div className="w-full h-60 flex flex-col lg:flex-row justify-center items-center bg-white gap-3 mt-10">
           <div className="flex flex-col gap-5">
-            <h1 className="text-xl sm:text-3xl mx-20 text-center text-gray-800 font-josefin">
+            <h1 className="text-xl sm:text-3xl mx-20 text-center text-gray-800">
               Find Answers To
               <br />
               <span className="text-dodgersBlue">F</span>
