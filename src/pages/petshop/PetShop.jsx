@@ -10,13 +10,13 @@ export const PetShop = () => {
             title={"Pet Food"}
             src={"/images/pet-food.jpg"}
             alt={"Pet Food"}
-            path={"/food"}
+            path={"/e-shop/food"}
           />
           <PetShopSection
             title={"Pet Toys and Accessories"}
             src={"/images/pet-toys.jpg"}
             alt={"Pet Toys"}
-            path={"/toys"}
+            path={"/e-shop/toys"}
           />
         </div>
       </NavigationLayout>

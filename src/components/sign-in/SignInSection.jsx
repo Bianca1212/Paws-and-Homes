@@ -6,7 +6,7 @@ export const SignInSection = ({ onClick }) => {
   return (
     <>
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div className="bg-white object-cover p-6 rounded shadow-lg md:w-1/3 md:h-2/3 w-11/12 max-w-md relative border-box flex flex-col">
+        <div className="bg-white font-merriWeather object-cover p-6 rounded shadow-lg md:w-1/3 md:h-2/3 w-11/12 max-w-md relative border-box flex flex-col">
           <Button className="absolute top-2 right-2 text-lg" onClick={onClick}>
             &times;
           </Button>

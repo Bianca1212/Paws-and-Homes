@@ -26,8 +26,8 @@ export const AppRouter = () => {
     { path: "/appointment", element: <AppointmentForm /> },
     { path: "/faq", element: <FAQPage /> },
     { path: "/e-shop", element: <PetShop /> },
-    { path: "/food", element: <PetFood /> },
-    { path: "/toys", element: <PetToys /> },
+    { path: "/e-shop/food", element: <PetFood /> },
+    { path: "/e-shop/toys", element: <PetToys /> },
     { path: "/team", element: <Team /> },
     { path: "/gallery", element: <Gallery /> },
   ]);

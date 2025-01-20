@@ -6,7 +6,7 @@ export const FAQPage = () => {
     <>
       <NavigationLayout>
         <div className="w-full h-60 flex flex-col lg:flex-row justify-center items-center bg-white gap-3 mt-10">
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 font-merriWeather">
             <h1 className="text-xl sm:text-3xl mx-20 text-center text-gray-700">
               Find Answers To
               <br />

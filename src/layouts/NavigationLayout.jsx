@@ -5,6 +5,7 @@ import { Button } from "../components/Button";
 import { SignInSection } from "../components/sign-in/SignInSection";
 import { NavigationButtonWithMenu } from "../components/navigation/NavigationButtonWithMenu";
 import { Link } from "react-router-dom";
+import Breadcrumbs from "../components/BreadCrumbs";
 
 export const NavigationLayout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +30,7 @@ export const NavigationLayout = ({ children }) => {
 
   return (
     <>
-      <div className="sticky top-0 z-50 bg-white shadow-md w-full">
+      <div className="sticky top-0 z-50 bg-white w-full">
         <div className="relative flex justify-between items-center">
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 items-center justify-center md:mx-5 mt-5 w-full">
             <img
@@ -76,7 +77,7 @@ export const NavigationLayout = ({ children }) => {
                   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" />
                 </svg>
                 <Button
-                  className="whitespace-nowrap text-white"
+                  className="whitespace-nowrap text-white font-merriWeather"
                   onClick={toggleSignIn}
                 >
                   SIGN IN
@@ -179,6 +180,7 @@ export const NavigationLayout = ({ children }) => {
           </div>
         )}
       </div>
+      <Breadcrumbs />
       <div>{children}</div>
     </>
   );
