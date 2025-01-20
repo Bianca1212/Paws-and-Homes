@@ -5,14 +5,28 @@ import { useForm } from "../../hooks/useForm";
 import { FormInput } from "../../components/FormInput";
 import { FormSelect } from "../../components/FormSelect";
 import { Calendar } from "../../components/Calendar";
+import axios from "axios";
 
 export const AppointmentForm = () => {
-  // const [appointmentDate, setAppointmentDate] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [availableHours, setAvailableHours] = useState(null);
-  const hoursModalRef = useRef(null);
+  const [selectedDate, setSelectedDate] = useState(null); // State for selected date(day of month)
+  const [availableHours, setAvailableHours] = useState([
+    // State for available hours in a day
+    "10:00 AM",
+    "11:00 AM",
+    "12:00 PM",
+    "1:00 PM",
+    "2:00 PM",
+    "3:00 PM",
+    "4:00 PM",
+  ]);
+  const [selectedHour, setSelectedHour] = useState(null); // State for selected hour(from available hours)
+  const [bookedHours, setBookedHours] = useState([]); // State for hours already selected
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
+  const hoursModalRef = useRef(null); // Refference for select hour modal
 
+  // Hook used to manage form values
   const { values, handleChange, resetForm } = useForm({
     firstName: "",
     lastName: "",
@@ -31,60 +45,182 @@ export const AppointmentForm = () => {
     setIsModalOpen(false);
   };
 
-  const handleSelectedDate = (date) => {
-    setSelectedDate(date.toLocaleDateString());
-    const hoursForSelectedDate = [
-      "10:00 AM",
-      "11:00 AM",
-      "12:00 PM",
-      "1:00 PM",
-      "2:00 PM",
-      "3:00 PM",
-      "4:00 PM",
-    ];
+  const validateForm = () => {
+    const newErrors = {};
+    if (!values.firstName) {
+      newErrors.firstName = "First Name is required!";
+    }
+    if (!values.lastName) {
+      newErrors.lastName = "Last Name is required!";
+    }
+    if (!values.petAge) {
+      newErrors.petAge = "Pet's Age is required!";
+    }
+    if (!values.petType) {
+      newErrors.petType = "Pet's Type is required!";
+    }
+    if (!values.petGender) {
+      newErrors.petGender = "Pet's Gender is required!";
+    }
+    if (!values.appointmentReason) {
+      newErrors.appointmentReason = "Reason is required!";
+    }
+    if (!selectedDate) {
+      newErrors.selectedDate = "Please select a date and a time!";
+    }
 
-    setAvailableHours(hoursForSelectedDate);
+    return newErrors;
+  };
+
+  const handleSelectedDate = (date) => {
+    const formattedDate = date.toLocaleDateString();
+    setSelectedDate(formattedDate);
+    checkIfHourIsBooked(formattedDate);
 
     if (hoursModalRef.current) {
-      hoursModalRef.current.classList.remove("hidden");
+      hoursModalRef.current.classList.remove("hidden"); // Makes the modal visible
     }
   };
 
   const closeHoursModal = () => {
     if (hoursModalRef.current) {
-      hoursModalRef.current.classList.add("hidden");
+      hoursModalRef.current.classList.add("hidden"); // Hides the modal
+    }
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const formErrors = validateForm();
+    if (formErrors && Object.keys(formErrors).length > 0) {
+      // Object.keys(formErrors) este o metodă care returnează un array conținând toate cheile din obiectul formErrors
+      setErrors(formErrors);
+      return;
+    }
+
+    // Check if selected our is already booked
+    if (bookedHours.includes(selectedHour)) {
+      alert("The selected hour is already booked. Please choose another hour.");
+      return;
+    }
+
+    setLoading(true);
+
+    // Creates an object for the new appointment
+    const newAppointment = {
+      ...values,
+      appointmentDate: selectedDate,
+      appointmentTime: selectedHour,
+    };
+
+    try {
+      console.log("Sending to server:", newAppointment);
+
+      await axios.post("http://localhost:3000/appointments", newAppointment);
+      setBookedHours([...bookedHours, selectedHour]); // Adds selected hour to the list of hours already booked
+      alert("Appointment successfully booked!");
+      resetForm();
+      setSelectedDate(null);
+      setSelectedHour(null);
+      // checkIfHourIsBooked(selectedDate);
+    } catch (error) {
+      ("Failed to book appointment. Please try again.");
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleHourSelection = (hour) => {
+    // Dacă ora nu este deja rezervată
+    if (bookedHours.includes(hour)) {
+      alert("This hour is already booked. Please select another one.");
+      return;
+    }
+    // Setează ora selectată
+    setSelectedHour(hour);
+    alert("Appointment booked for " + hour);
+  };
+
+  const checkIfHourIsBooked = async (selectedDate) => {
+    try {
+      // Obținem programările existente pentru a verifica ce ore sunt deja rezervate
+      const appointmentResponse = await axios.get(
+        "http://localhost:3000/appointments"
+      );
+      const appointments = appointmentResponse.data;
+
+      // Filtrăm programările care corespund datei selectate
+      const bookedHoursForSelectedDate = appointments
+        .filter((appointment) => appointment.appointmentDate === selectedDate)
+        .map((appointment) => appointment.appointmentTime);
+
+      // Setăm orele deja rezervate
+      setBookedHours(bookedHoursForSelectedDate);
+      // Filtrăm orele disponibile
+      const allAvailableHours = [
+        "10:00 AM",
+        "11:00 AM",
+        "12:00 PM",
+        "1:00 PM",
+        "2:00 PM",
+        "3:00 PM",
+        "4:00 PM",
+      ];
+
+      const updatedAvailableHours = allAvailableHours.filter(
+        (hour) => !bookedHoursForSelectedDate.includes(hour)
+      );
+      setAvailableHours(updatedAvailableHours);
+    } catch (error) {
+      alert("Error checking booked hours: " + error.message);
     }
   };
 
   return (
     <>
       <NavigationLayout>
-        <div className="w-full h-screen bg-lightBlue relative">
-          <div className="px-5 md:w-2/3 md:h-3/4 bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 flex flex-row gap-5 items-center rounded-md shadow-lg">
+        <div className="w-full h-screen bg-columbiaBlue relative">
+          <div className="px-5 md:w-2/3 md:h-auto bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 flex flex-row gap-5 items-center rounded-md shadow-lg">
             <img
               src="./images/form-img.jpg"
               alt="Vision"
               className="hidden lg:block w-30 h-48 sm:h-64 md:h-72 lg:h-80"
             />
             <div className="w-full flex flex-col justify-center items-center">
-              <h1 className="mt-3 text-lg text-center md:text-2xl text-gray-700 font-semibold">
+              <h1 className="mt-3 text-lg text-center md:text-2xl text-pennBlue font-semibold">
                 Book an appointment for your pet
               </h1>
               <form className="p-10 flex flex-wrap justify-center items-center gap-5">
-                <FormInput
-                  type={"text"}
-                  name={"firstName"}
-                  placeholder={"Owner's First Name"}
-                  value={values.firstName}
-                  onChange={handleChange}
-                />
-                <FormInput
-                  type={"text"}
-                  name={"lastName"}
-                  placeholder={"Owner's Last Name"}
-                  value={values.lastName}
-                  onChange={handleChange}
-                />
+                <div className="flex flex-col">
+                  <FormInput
+                    type={"text"}
+                    name={"firstName"}
+                    placeholder={"Owner's First Name"}
+                    value={values.firstName}
+                    onChange={handleChange}
+                  />
+                  {errors.firstName && (
+                    <p className="text-red-500 text-center">
+                      {errors.firstName}
+                    </p>
+                  )}
+                </div>
+                <div className="flex flex-col">
+                  <FormInput
+                    type={"text"}
+                    name={"lastName"}
+                    placeholder={"Owner's Last Name"}
+                    value={values.lastName}
+                    onChange={handleChange}
+                  />
+                  {errors.lastName && (
+                    <p className="text-red-500 text-center">
+                      {errors.lastName}
+                    </p>
+                  )}
+                </div>
+
                 <FormInput
                   type={"text"}
                   name={"petName"}
@@ -92,66 +228,106 @@ export const AppointmentForm = () => {
                   value={values.petName}
                   onChange={handleChange}
                 />
-                <FormInput
-                  type={"number"}
-                  name={"petAge"}
-                  placeholder={"Pets's Age"}
-                  value={values.petAge}
-                  onChange={handleChange}
-                />
-
-                <FormSelect
-                  name={"petType"}
-                  value={values.petType}
-                  onChange={handleChange}
-                >
-                  <option value="">Pet Type</option>
-                  <option value="cat">Cat</option>
-                  <option value="dog">Dog</option>
-                  <option value="rabbit">Rabbit</option>
-                  <option value="turtle">Turtle</option>
-                  <option value="other">Other</option>
-                </FormSelect>
-
-                <FormSelect
-                  name={"petGender"}
-                  value={values.petGender}
-                  onChange={handleChange}
-                >
-                  <option value="">Pet Gender</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </FormSelect>
+                <div className="flex flex-col">
+                  <FormInput
+                    type={"number"}
+                    name={"petAge"}
+                    placeholder={"Pets's Age"}
+                    value={values.petAge}
+                    onChange={handleChange}
+                  />
+                  {errors.petAge && (
+                    <p className="text-red-500 text-center">{errors.petAge}</p>
+                  )}
+                </div>
+                <div className="flex flex-col">
+                  <FormSelect
+                    name={"petType"}
+                    value={values.petType}
+                    onChange={handleChange}
+                  >
+                    <option value="">Pet Type</option>
+                    <option value="cat">Cat</option>
+                    <option value="dog">Dog</option>
+                    <option value="rabbit">Rabbit</option>
+                    <option value="turtle">Turtle</option>
+                    <option value="other">Other</option>
+                  </FormSelect>
+                  {errors.petType && (
+                    <p className="text-red-500 text-center">{errors.petType}</p>
+                  )}
+                </div>
+                <div className="flex flex-col">
+                  <FormSelect
+                    name={"petGender"}
+                    value={values.petGender}
+                    onChange={handleChange}
+                  >
+                    <option value="">Pet Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </FormSelect>
+                  {errors.petGender && (
+                    <p className="text-red-500 text-center">
+                      {errors.petGender}
+                    </p>
+                  )}
+                </div>
                 <FormSelect
                   name={"desexed"}
                   value={values.desexed}
                   onChange={handleChange}
                 >
-                  <option value="">Desexed?</option>
+                  <option value="" className="text-gray-500">
+                    Desexed?
+                  </option>
                   <option value="spayed/neutered">Spayed/Neutered</option>
                   <option value="no">No</option>
                 </FormSelect>
-                <FormSelect
-                  name={"appointmentReason"}
-                  value={values.appointmentReason}
-                  onChange={handleChange}
-                >
-                  <option value="">Reason of appointment</option>
-                  <option value="vaccination">Vaccination</option>
-                  <option value="check-up">Check-up</option>
-                  <option value="dental-procedure">Dental Procedure</option>
-                  <option value="lab-test">Lab Test</option>
-                  <option value="other-reason">Other</option>
-                </FormSelect>
+                <div className="flex flex-col">
+                  <FormSelect
+                    name={"appointmentReason"}
+                    value={values.appointmentReason}
+                    onChange={handleChange}
+                  >
+                    <option value="" className="text-gray-500">
+                      Reason
+                    </option>
+                    <option value="vaccination">Vaccination</option>
+                    <option value="check-up">Check-up</option>
+                    <option value="dental-procedure">Dental Procedure</option>
+                    <option value="lab-test">Lab Test</option>
+                    <option value="other-reason">Other</option>
+                  </FormSelect>
+                  {errors.appointmentReason && (
+                    <p className="text-red-500 text-center">
+                      {errors.appointmentReason}
+                    </p>
+                  )}
+                </div>
+                <div className="flex justify-center gap-8">
+                  <Button
+                    className="mb-3 p-2 bg-pennBlue hover:bg-midnightGreen rounded-md text-white hover:scale-110 hover:bg-blue-200"
+                    onClick={openModal}
+                  >
+                    Select a schedule
+                  </Button>
+                  <div className="flex flex-col">
+                    <Button
+                      className="mb-3 p-2 bg-pennBlue hover:bg-midnightGreen rounded-md text-white hover:scale-110 hover:bg-blue-200"
+                      disabled={loading}
+                      onClick={handleSubmit}
+                    >
+                      {loading ? "Booking..." : "Book Appointment"}
+                    </Button>
+                    {errors.selectedDate && (
+                      <p className="text-red-500 text-center">
+                        {errors.selectedDate}
+                      </p>
+                    )}
+                  </div>
+                </div>
               </form>
-              <div className="flex justify-center">
-                <Button
-                  className="mb-3 p-2 bg-lightBlue rounded-md text-gray-800 hover:scale-110 hover:bg-blue-200"
-                  onClick={openModal}
-                >
-                  Select a schedule
-                </Button>
-              </div>
 
               {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -184,9 +360,21 @@ export const AppointmentForm = () => {
                     {availableHours.map((hour, index) => (
                       <li
                         key={index}
-                        className="p-2 bg-lightBlue rounded-md text-center text-gray-700 hover:bg-blue-200 cursor-pointer"
+                        className={`p-2 ${
+                          bookedHours.includes(hour)
+                            ? "bg-gray-300 cursor-not-allowed"
+                            : hour === selectedHour
+                            ? "bg-gray-300"
+                            : "bg-columbiaBlue hover:bg-midnightGreen hover:text-white cursor-pointer"
+                        } rounded-md text-center text-gray-700`}
+                        onClick={() =>
+                          !bookedHours.includes(hour) &&
+                          handleHourSelection(hour)
+                        }
                       >
-                        {hour}
+                        {bookedHours.includes(hour)
+                          ? "Appointment booked"
+                          : hour}
                       </li>
                     ))}
                   </ul>

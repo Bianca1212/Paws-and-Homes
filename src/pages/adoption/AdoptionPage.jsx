@@ -11,8 +11,8 @@ export const AdoptionPage = () => {
           alt="Cat-and-Dog"
           className="w-full object-cover h-48 sm:h-64 md:h-72 lg:h-96"
         />
-        <div className="flex flex-col bg-narvik">
-          <h1 className="text-center mt-12 text-xl sm:text-2xl font-josefin font-semibold text-gray-800">
+        <div className="flex flex-col bg-beige">
+          <h1 className="text-center mt-12 text-xl sm:text-2xl font-josefin font-semibold text-pennBlue">
             DIFFERENT WAYS TO HELP OUR FURRY FRIENDS
           </h1>
           <section className="flex flex-col sm:flex-row gap-15 mb-20 mt-10 justify-around items-center">
@@ -153,7 +153,7 @@ export const AdoptionPage = () => {
           </section>
           <section className="bg-columbiaBlue flex flex-col lg:flex-row items-center justify-center gap-7 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg rounded-xl">
             <div className="flex flex-col items-center justify-center gap-7">
-              <h1 className="mt-20 text-2xl sm:text-3xl font-josefin font-semibold text-midnightBlue drop-shadow-md">
+              <h1 className="mt-20 text-2xl sm:text-3xl font-josefin font-semibold text-pennBlue drop-shadow-md">
                 ADOPT A CAT
               </h1>
               <p className="text-center font-josefin w-full text-gray-800 text-xl drop-shadow-md">
@@ -165,7 +165,7 @@ export const AdoptionPage = () => {
               </p>
               <Button
                 path={"/adoptions"}
-                className="font-josefin bg-midnightBlue hover:bg-camel p-3 text-white font-semibold mt-5 mb-10 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
+                className="font-josefin bg-pennBlue hover:bg-midnightGreen p-3 text-white font-semibold mt-5 mb-10 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
               >
                 SEE MORE
               </Button>
@@ -183,10 +183,10 @@ export const AdoptionPage = () => {
               className="lg:mr-20 w-full object-cover h-48 sm:h-64 md:h-72 lg:h-96 rounded-full shadow-lg"
             />
             <div className="flex flex-col items-center justify-center gap-7">
-              <h1 className="mt-2 lg:mt-20 text-2xl sm:text-3xl font-josefin font-semibold text-chocolate drop-shadow-md">
+              <h1 className="mt-2 lg:mt-20 text-2xl sm:text-3xl font-josefin font-semibold text-midnightGreen drop-shadow-md">
                 ADOPT A DOG
               </h1>
-              <p className="text-center font-josefin w-full text-gray-800 text-xl drop-shadow-md">
+              <p className="text-center font-josefin w-full text-midnightGreen text-xl drop-shadow-md">
                 Ready to welcome unconditional love into your life? Adopt a dog
                 today! From energetic pups to loyal seniors, we have a variety
                 of dogs looking for their forever home. Make a difference by
@@ -195,7 +195,7 @@ export const AdoptionPage = () => {
               </p>
               <Button
                 path={"/adoptions"}
-                className="font-josefin hover:bg-midnightBlue bg-camel p-3 text-white font-semibold mt-5 mb-10 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
+                className="font-josefin bg-pennBlue hover:bg-midnightGreen p-3 text-white font-semibold mt-5 mb-10 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
               >
                 SEE MORE
               </Button>

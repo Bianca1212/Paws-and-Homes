@@ -7,14 +7,14 @@ export const FAQPage = () => {
       <NavigationLayout>
         <div className="w-full h-60 flex flex-col lg:flex-row justify-center items-center bg-white gap-3 mt-10">
           <div className="flex flex-col gap-5">
-            <h1 className="text-xl sm:text-3xl mx-20 text-center text-gray-800">
+            <h1 className="text-xl sm:text-3xl mx-20 text-center text-gray-700">
               Find Answers To
               <br />
-              <span className="text-dodgersBlue">F</span>
+              <span className="text-pennBlue">F</span>
               requently
-              <span className="text-dodgersBlue">&nbsp;A</span>
+              <span className="text-pennBlue">&nbsp;A</span>
               sked
-              <span className="text-dodgersBlue">&nbsp;Q</span>
+              <span className="text-pennBlue">&nbsp;Q</span>
               uestion
             </h1>
             <h2 className="text-gray-600 text-center">

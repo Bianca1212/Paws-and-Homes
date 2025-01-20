@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export const FoodType = ({ name, price, image }) => {
+export const Category = ({ name, price, image }) => {
   // const splitName = (name) => {
   //   const words = name.split(" ");
   //   const firstPart = words.slice(0, 5).join(" "); // primele 5 cuvinte
@@ -22,7 +22,7 @@ export const FoodType = ({ name, price, image }) => {
   );
 };
 
-FoodType.propTypes = {
+Category.propTypes = {
   name: PropTypes.string,
   price: PropTypes.string,
   // description: PropTypes.string,

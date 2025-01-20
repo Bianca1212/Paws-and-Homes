@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { usePetFood } from "../../hooks/usePetFood";
 import { NavigationLayout } from "../../layouts/NavigationLayout";
-import { FoodType } from "./FoodType";
+import { Category } from "./Category";
 
 export const PetFood = () => {
   const { petFood } = usePetFood();
@@ -91,7 +91,7 @@ export const PetFood = () => {
       <section className="ml-20 flex flex-wrap items-center gap-8">
         {filteredAnimalTypes().length > 0 ? (
           filteredAnimalTypes().map((food) => (
-            <FoodType
+            <Category
               key={food.id}
               name={food.name}
               image={food.image}

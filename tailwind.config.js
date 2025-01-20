@@ -5,8 +5,11 @@ export default {
     fontFamily: {
       cromisom: ["Cromisom Pro", "sans-serif"],
       bentham: ["Bentham", "serif"],
-      sans: ["Noto Sans", "sans-serif"],
+      sans: ["Open Sans", "sans-serif"],
       josefin: ["Josefin Sans", "sans-serif"],
+      roboto: ["Roboto", "sans-serif"],
+      lato: ["Lato", "sans-serif"],
+      merriWeather: ["Merriweather", "serif"],
     },
     extend: {
       colors: {
@@ -36,8 +39,7 @@ export default {
         robinEggBlue: "#96DED1",
         desert: "#FAD5A5",
         chocolate: "#7B3F00",
-        columbiaBlue: "#B9D9EB",
-        beige: "#F5F5DC",
+        // columbiaBlue: "#B9D9EB",
         astrosNavy: "#002D62",
         bisque: "#F2D2BD",
         canaryYellow: "#FFFF8F",
@@ -48,6 +50,12 @@ export default {
         sapphire: "#52B2BF",
         aliceBlue: "#F0F8FF",
         lowesBlue: "#004792",
+
+        pennBlue: "#0E103D",
+        beige: "#EFF6E0",
+        midnightGreen: "#124559",
+        carolinaBlue: "#87BCDE",
+        columbiaBlue: "#BDD4E7",
       },
       height: {
         128: "32rem", // 512px

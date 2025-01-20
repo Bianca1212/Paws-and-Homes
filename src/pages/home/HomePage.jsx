@@ -11,14 +11,14 @@ export const HomePage = () => {
           alt="Cat-and-Dog"
           className="w-full object-cover h-48 sm:h-64 md:h-72 lg:h-128"
         />
-        <section className="flex flex-col items-center justify-center bg-eggshell gap-6 py-16 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
-          <h1 className="text-2xl sm:text-3xl font-josefin font-semibold text-midnightBlue drop-shadow-md text-center">
+        <section className="font-merriWeather flex flex-col items-center justify-center bg-beige gap-6 py-16 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
+          <h1 className="text-2xl sm:text-3xl font-semibold text-pennBlue drop-shadow-md text-center">
             WELCOME TO
           </h1>
-          <h2 className="text-2xl sm:text-4xl font-josefin font-bold text-chocolate drop-shadow-lg text-center">
+          <h2 className="text-2xl sm:text-4xl font-bold text-midnightGreen drop-shadow-lg text-center">
             PAWS & HOMES VETERINARY CLINIC
           </h2>
-          <p className="text-center font-josefin w-full sm:w-3/4 md:w-2/3 lg:w-1/2 text-gray-800 text-xl leading-relaxed drop-shadow-md">
+          <p className="text-center w-full sm:w-3/4 md:w-2/3 lg:w-1/2 text-gray-800 text-xl leading-relaxed drop-shadow-md">
             At Paws & Homes, we understand the deep bond between pets and their
             families. Our mission is to provide exceptional veterinary care that
             not only addresses your pet’s health needs but also supports the
@@ -36,17 +36,17 @@ export const HomePage = () => {
           </p>
           <Button
             path={"/appointment"}
-            className="font-josefin bg-midnightBlue hover:bg-camel p-3 text-white font-semibold my-5 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
+            className="bg-pennBlue hover:bg-camel p-3 text-white font-semibold my-5 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
           >
             MAKE AN APPOINTMENT
           </Button>
         </section>
 
-        <section className="flex flex-col items-center justify-center gap-7 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
-          <h1 className="text-2xl sm:text-3xl font-josefin font-bold text-chocolate drop-shadow-lg text-center">
+        <section className="font-merriWeather flex flex-col items-center justify-center gap-7 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
+          <h1 className="text-2xl sm:text-3xl font-bold text-midnightGreen drop-shadow-lg text-center">
             PREVENTIVE PET CARE AND VETERINARY SERVICES
           </h1>
-          <p className="text-center font-josefin w-full sm:w-3/4 md:w-2/3 lg:w-1/2 text-gray-800 text-xl leading-relaxed drop-shadow-md">
+          <p className="text-center w-full sm:w-3/4 md:w-2/3 lg:w-1/2 text-gray-800 text-xl leading-relaxed drop-shadow-md">
             We offer comprehensive services for large and small animals, with a
             focus on preventative care such as annual wellness exams,
             vaccinations, nutritional counseling, and parasite prevention. Our
@@ -64,7 +64,7 @@ export const HomePage = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="#002D62"
+                fill="#124559"
                 width="90px"
                 height="90px"
                 viewBox="0 0 24 24"
@@ -242,36 +242,36 @@ export const HomePage = () => {
           </div>
         </section>
 
-        <section className="bg-midnightBlue flex flex-col lg:flex-row items-center justify-center gap-3 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
+        <section className="font-merriWeather bg-columbiaBlue text-pennBlue flex flex-col lg:flex-row items-center justify-center gap-3 py-10 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
           <img
             src="./images/about-team.jpg"
             alt="Cat-and-Dog"
             className="md:ml-20 w-full object-cover h-42 sm:h-64 md:h-72 lg:h-96 rounded-full shadow-lg"
           />
           <div className="flex flex-col md:flex-row md:flex-col items-center justify-center gap-7">
-            <h1 className="mt-10 text-2xl sm:text-3xl font-josefin font-semibold text-white drop-shadow-lg">
+            <h1 className="mt-10 text-2xl sm:text-3xl font-semibold drop-shadow-lg">
               MEET OUR TEAM
             </h1>
-            <p className="text-center font-josefin w-full sm:w-3/4 md:w-2/3 lg:w-1/2 text-white text-xl leading-relaxed drop-shadow-md">
+            <p className="text-center w-full sm:w-3/4 md:w-2/3 lg:w-1/2 text-xl leading-relaxed drop-shadow-md">
               Our knowledgeable and compassionate team is made up of life-long
               animal lovers dedicated to providing your animals the best in
               veterinary care.
             </p>
             <Button
               path={"/team"}
-              className="font-josefin bg-camel hover:bg-midnightBlue p-3 text-white font-semibold mt-5 mb-10 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
+              className="bg-pennBlue hover:bg-midnightGreen p-3 text-white font-semibold mt-5 mb-10 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
             >
               GET TO KNOW US
             </Button>
           </div>
         </section>
 
-        <section className="bg-eggshell flex flex flex-col lg:flex-row items-center justify-center gap-7 py-16 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
+        <section className="font-merriWeather bg-beige flex flex flex-col lg:flex-row items-center justify-center gap-7 py-16 px-6 sm:px-12 md:px-24 lg:px-32 shadow-lg">
           <div className="flex flex-col items-center justify-center gap-7">
-            <h1 className="mt-5 md:mt-20 text-2xl sm:text-3xl font-josefin font-semibold text-midnightBlue drop-shadow-md">
+            <h1 className="mt-5 md:mt-20 text-2xl sm:text-3xl font-semibold text-pennBlue drop-shadow-md">
               ADOPTION PARTNERSHIPS
             </h1>
-            <p className="text-center font-josefin w-full text-gray-800 text-xl drop-shadow-md">
+            <p className="text-center w-full text-gray-800 text-xl drop-shadow-md">
               We proudly collaborate with adoption associations to help find
               loving homes for pets in need. Through these partnerships, we
               offer veterinary care, support, and guidance to ensure every
@@ -279,7 +279,7 @@ export const HomePage = () => {
             </p>
             <Button
               path={"/adoptions"}
-              className="font-josefin bg-midnightBlue hover:bg-camel p-3 text-white font-semibold mt-5 mb-10 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
+              className="bg-pennBlue hover:bg-midnightGreen  p-3 text-white font-semibold mt-5 mb-10 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
             >
               SEE MORE
             </Button>
@@ -290,12 +290,12 @@ export const HomePage = () => {
             className="md:mr-20 w-full object-cover h-48 sm:h-64 md:h-72 lg:h-96 rounded-full shadow-lg"
           />
         </section>
-        <section className="flex items-center justify-end">
+        <section className="font-merriWeather flex items-center justify-end">
           <div className="flex flex-col items-center justify-center gap-4 mx-10 my-4">
-            <h1 className="mt-2 text-xl sm:text-2xl font-josefin font-semibold drop-shadow-md">
+            <h1 className="mt-2 text-xl sm:text-2xl font-semibold drop-shadow-md">
               COME VISIT US
             </h1>
-            <p className="text-center font-josefin w-full text-gray-800">
+            <p className="text-center w-full text-gray-800">
               <strong>Address:</strong> Paws & Homes Veterinary Clinic
               <br /> 1234 Pet Lane,
               <br /> Suite 101 Hometown, AN 54321 <br />

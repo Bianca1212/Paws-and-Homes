@@ -1,15 +1,15 @@
 import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 const NavigationButton = ({ path, onClick, children }) => {
   return (
     <>
-      <button
-        path={path}
+      <Link
+        to={path}
         onClick={onClick}
         className="p-2 font-josefin hover:scale-110 cursor-pointer text-white text-sm"
       >
         {children}
-      </button>
+      </Link>
     </>
   );
 };

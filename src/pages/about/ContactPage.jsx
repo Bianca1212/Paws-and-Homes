@@ -7,11 +7,11 @@ export const ContactPage = () => {
   return (
     <>
       <NavigationLayout>
-        <section className="flex flex-col gap-5 items-center py-4">
-          <h1 className="mt-10 text-2xl sm:text-3xl font-semibold text-lowesBlue text-center drop-shadow-md">
+        <section className="flex flex-col gap-5 items-center py-4 text-pennBlue">
+          <h1 className="mt-10 text-2xl sm:text-3xl font-semibold text-center drop-shadow-md">
             CONTACT US
           </h1>
-          <p className="m-8 md:m-0 mt-8 text-xl sm:text-2xl font-josefin font-semibold text-lowesBlue text-center drop-shadow-md">
+          <p className="m-8 md:m-0 mt-8 text-xl sm:text-2xl font-josefin font-semibold text-center drop-shadow-md">
             Any questions or remarks? Just write us a message!
           </p>
           <div className="flex flex-col gap-10 justify-center">
@@ -20,10 +20,10 @@ export const ContactPage = () => {
             <textarea
               placeholder="Write here..."
               rows={10}
-              className="font-josefin sm:w-96 sm:h-14 p-4 cursor-pointer border-2 border-gray-500 border-lowesBlue text-center rounded-md placeholder:font-bold hover:placeholder:text-white hover:placeholder:font-bold focus:outline-none"
+              className="font-josefin sm:w-96 sm:h-14 p-4 cursor-pointer border-2 border-gray-500 border-pennBlue text-center rounded-md placeholder:font-bold hover:placeholder:text-white hover:placeholder:font-bold focus:outline-none"
             />
           </div>
-          <Button className="bg-lowesBlue text-white hover:bg-chocolate p-3 rounded-md font-semibold">
+          <Button className="bg-pennBlue hover:bg-midnightGreen text-white hover:bg-chocolate p-3 rounded-md font-semibold">
             Submit
           </Button>
         </section>
@@ -44,11 +44,11 @@ export const ContactPage = () => {
               >
                 <path
                   d="M15.5562 14.5477L15.1007 15.0272C15.1007 15.0272 14.0181 16.167 11.0631 13.0559C8.10812 9.94484 9.1907 8.80507 9.1907 8.80507L9.47752 8.50311C10.1841 7.75924 10.2507 6.56497 9.63424 5.6931L8.37326 3.90961C7.61028 2.8305 6.13596 2.68795 5.26145 3.60864L3.69185 5.26114C3.25823 5.71766 2.96765 6.30945 3.00289 6.96594C3.09304 8.64546 3.81071 12.259 7.81536 16.4752C12.0621 20.9462 16.0468 21.1239 17.6763 20.9631C18.1917 20.9122 18.6399 20.6343 19.0011 20.254L20.4217 18.7584C21.3806 17.7489 21.1102 16.0182 19.8833 15.312L17.9728 14.2123C17.1672 13.7486 16.1858 13.8848 15.5562 14.5477Z"
-                  fill="#002D62"
+                  fill="#124559"
                 />
                 <path
                   d="M13.2595 1.87983C13.3257 1.47094 13.7122 1.19357 14.1211 1.25976C14.1464 1.26461 14.2279 1.27983 14.2705 1.28933C14.3559 1.30834 14.4749 1.33759 14.6233 1.38082C14.9201 1.46726 15.3347 1.60967 15.8323 1.8378C16.8286 2.29456 18.1544 3.09356 19.5302 4.46936C20.906 5.84516 21.705 7.17097 22.1617 8.16725C22.3899 8.66487 22.5323 9.07947 22.6187 9.37625C22.6619 9.52466 22.6912 9.64369 22.7102 9.72901C22.7197 9.77168 22.7267 9.80594 22.7315 9.83125L22.7373 9.86245C22.8034 10.2713 22.5286 10.6739 22.1197 10.7401C21.712 10.8061 21.3279 10.53 21.2601 10.1231C21.258 10.1121 21.2522 10.0828 21.2461 10.0551C21.2337 9.9997 21.2124 9.91188 21.1786 9.79572C21.1109 9.56339 20.9934 9.21806 20.7982 8.79238C20.4084 7.94207 19.7074 6.76789 18.4695 5.53002C17.2317 4.29216 16.0575 3.59117 15.2072 3.20134C14.7815 3.00618 14.4362 2.88865 14.2038 2.82097C14.0877 2.78714 13.9417 2.75363 13.8863 2.7413C13.4793 2.67347 13.1935 2.28755 13.2595 1.87983Z"
-                  fill="#002D62"
+                  fill="#124559"
                 />
                 <path
                   fillRule="evenodd"
@@ -82,7 +82,7 @@ export const ContactPage = () => {
                   />
                 </g>
                 <path
-                  style={{ fill: "#2D527C" }}
+                  style={{ fill: "#124559" }}
                   d="M507.107,230.077c3.099-2.561,4.893-6.373,4.893-10.395v-38.019c0-7.449-6.04-13.487-13.487-13.487  H300.912l67.165-55.535c3.099-2.561,4.893-6.373,4.893-10.395V64.228c0-7.449-6.04-13.487-13.487-13.487H13.487  C6.038,50.741,0,56.779,0,64.228v3.138v34.881v224.952v0.111v3.028c0,7.449,6.038,13.487,13.487,13.487H139.03v100.811v0.111v3.028  c0,7.449,6.038,13.487,13.487,13.487h345.997c7.448,0,13.487-6.038,13.487-13.487v-3.138V301.593c0-7.449-6.04-13.487-13.487-13.487  c-7.448,0-13.487,6.038-13.487,13.487v114.39l-101.378-83.823L507.107,230.077z M485.025,213.335l-159.51,131.889L166.004,213.335  v-18.184h97.432h221.591v18.184H485.025z M26.975,130.899l101.378,83.823L26.975,298.546V130.899z M166.004,248.335l101.378,83.823  l-101.378,83.823V248.335z M345.996,95.899l-87.415,72.278H152.515c-7.449,0-13.487,6.038-13.487,13.487v3.138v3.747L26.975,95.899  V77.715h319.021V95.899z M47.169,316.849l91.859-75.954v75.954H47.169z M464.831,434.285H186.199l102.348-84.626l28.373,23.46  c2.494,2.062,5.543,3.093,8.594,3.093s6.1-1.032,8.594-3.093l28.373-23.46L464.831,434.285z"
                 />
               </svg>
@@ -99,14 +99,14 @@ export const ContactPage = () => {
               >
                 <path
                   d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
-                  stroke="#002D62"
+                  stroke="#124559"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
                 <path
                   d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z"
-                  stroke="#002D62"
+                  stroke="#124559"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -126,7 +126,7 @@ export const ContactPage = () => {
               >
                 <path
                   d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
-                  fill="#002D62"
+                  fill="#124559"
                 />
                 <path
                   fillRule="evenodd"

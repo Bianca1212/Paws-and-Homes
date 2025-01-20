@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-export const Member = ({ name, images, description }) => {
+export const Member = ({ name, images, description, services }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isImageChanging, setIsImageChanging] = useState(false);
 
@@ -29,9 +29,9 @@ export const Member = ({ name, images, description }) => {
   };
   return (
     <>
-      <div className="border-2 border-gray-200 rounded-lg shadow-lg flex flex-col items-center p-3 bg-blue-100 text-center">
-        <h1 className="text-xl font-semibold text-gray-900">{name}</h1>
-        <div className="flex flex-col md:flex-row items-center">
+      <div className="font-merriWeather border-2 border-gray-200 rounded-lg shadow-lg flex flex-row gap-20 items-center justify-around p-3 bg-beige text-center">
+        <section className=" flex flex-col ">
+          <h1 className="text-xl font-semibold text-gray-900">{name}</h1>
           <img
             src={images[currentImageIndex]}
             alt={name}
@@ -43,7 +43,35 @@ export const Member = ({ name, images, description }) => {
           <p className="text-gray-800 mt-2 mx-5 max-w-md break-words">
             {description}
           </p>
-        </div>
+        </section>
+        {/* <section className="flex flex-col items-start">
+          <h2 className="text-lg font-semibold mt-4">Services:</h2>
+          <ul className="list-disc pl-6 mt-2">
+            {services &&
+              services.map((service, index) => (
+                <li key={index} className="text-gray-700">
+                  <strong>{service.name}</strong>
+                  {service.conditions && (
+                    <ul className="pl-4">
+                      {service.conditions.map((condition, subIndex) => (
+                        <li key={subIndex}>{condition}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {service.description && (
+                    <p className="mt-2">{service.description}</p>
+                  )}
+                  {service.methods && (
+                    <ul className="pl-4 mt-2">
+                      {service.methods.map((method, methodIndex) => (
+                        <li key={methodIndex}>{method}</li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+          </ul>
+        </section> */}
       </div>
     </>
   );
@@ -53,4 +81,5 @@ Member.propTypes = {
   name: PropTypes.string,
   images: PropTypes.array,
   description: PropTypes.string,
+  services: PropTypes.array,
 };

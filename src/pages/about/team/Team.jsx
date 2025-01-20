@@ -13,13 +13,13 @@ export const Team = () => {
 
   const goToPreviousMember = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + teamMembers.length) & teamMembers.length
+      (prevIndex) => (prevIndex - 1 + teamMembers.length) % teamMembers.length
     );
   };
 
   return (
     <NavigationLayout>
-      <div className="container mx-auto p-4">
+      <div className="bg-columbiaBlue container mx-auto p-4">
         <h1 className="text-3xl font-semibold text-gray-800 text-center mb-8 mt-12">
           Meet Our Team
         </h1>
@@ -31,6 +31,7 @@ export const Team = () => {
                 name={teamMembers[currentIndex].name}
                 images={teamMembers[currentIndex].images}
                 description={teamMembers[currentIndex].description}
+                services={teamMembers[currentIndex].services}
               />
               <div className="flex justify-between gap-4 mt-4">
                 <button

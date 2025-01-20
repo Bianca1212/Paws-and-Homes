@@ -1,5 +1,8 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import { FaSortUp, FaSortDown } from "react-icons/fa";
+import { Button } from "./Button";
+
 export const FAQSection = ({ name, faqData }) => {
   const [isSectionOpen, setIsSectionOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
@@ -17,7 +20,7 @@ export const FAQSection = ({ name, faqData }) => {
   };
 
   return (
-    <div className="">
+    <div>
       <div
         className="flex flex-row gap-2 items-center cursor-pointer mx-8"
         onClick={toggleFAQSection}
@@ -46,7 +49,7 @@ export const FAQSection = ({ name, faqData }) => {
           </svg>
         )}
 
-        <p className="text-xl font-semibold hover:scale-110 font-cromisom">
+        <p className="text-xl font-semibold hover:scale-110 font-merriWeather text-gray-900">
           {name}
         </p>
       </div>
@@ -54,15 +57,18 @@ export const FAQSection = ({ name, faqData }) => {
         <div className="mx-8 my-3">
           {faqData.map((item, index) => (
             <div key={index}>
-              <div
-                className="cursor-pointer p-2"
-                onClick={() => toggleAnswer(index)}
-              >
-                <p className="text-lg font-cromisom">{item.question}</p>
+              <div className="flex items-center justify-between p-2 cursor-pointer">
+                <p className="text-lg font-merriWeather">{item.question}</p>
+                <Button
+                  onClick={() => toggleAnswer(index)}
+                  className="cursor-pointer hover:scale-110 text-lg"
+                >
+                  {activeIndex === index ? <FaSortUp /> : <FaSortDown />}
+                </Button>
               </div>
               {activeIndex === index && (
-                <div className="bg-gray-200 p-2 mt-2 rounded-lg half-width-center">
-                  <div className="text-sm font-cromisom">{item.answer}</div>
+                <div className="bg-columbiaBlue p-2 mt-2 rounded-lg half-width-center">
+                  <div className="font-merriWeather">{item.answer}</div>
                 </div>
               )}
             </div>

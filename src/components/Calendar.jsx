@@ -74,7 +74,6 @@ export const Calendar = ({ onDateSelect }) => {
       currentDate.getMonth(),
       day
     );
-    // console.log(dayDate);
 
     return dayDate >= today;
   };
@@ -100,7 +99,7 @@ export const Calendar = ({ onDateSelect }) => {
             ◀
           </button>
           <div className="flex items-center">
-            <p className="text-gray-800 font-bold font-dancingScript text-lg sm:text-xl">
+            <p className="text-gray-800 font-bold font-merriWeather text-lg sm:text-xl">
               {formatDate()}
             </p>
           </div>
@@ -135,7 +134,7 @@ export const Calendar = ({ onDateSelect }) => {
                 key={index}
                 className={`p-1 sm:p-2 ${
                   isValidDay
-                    ? "border-2 border-lightBlue hover:bg-lightBlue hover:scale-110 cursor-pointer"
+                    ? "border-2 border-columbiaBlue hover:bg-columbiaBlue hover:scale-110 cursor-pointer"
                     : "bg-gray-300 text-gray-500 cursor-not-allowed"
                 } text-center sm:text-lg`}
                 onClick={() => isValidDay && handleDayClick(day)}
