@@ -19,7 +19,7 @@ export const Team = () => {
 
   return (
     <NavigationLayout>
-      <div className="bg-columbiaBlue container mx-auto p-4">
+      <div className="bg-white container mx-auto p-4">
         <h1 className="text-3xl font-semibold text-gray-800 text-center mb-8 mt-12">
           Meet Our Team
         </h1>

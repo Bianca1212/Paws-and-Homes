@@ -5,10 +5,16 @@ export const PresentationCard = ({
   description,
   buttonName,
   children,
+  dataAos,
+  dataAosDelay,
 }) => {
   return (
     <>
-      <div className="w-80 h-80 flex flex-col justify-center items-center mt-10 bg-white shadow-lg rounded-md border-2 border-gray-200 hover:border-2 hover:border-pennBlue">
+      <div
+        className="w-80 h-80 flex flex-col justify-center items-center mt-10 bg-white shadow-lg rounded-md border-2 border-gray-200 hover:border-2 hover:border-pennBlue"
+        data-aos={dataAos}
+        data-aos-delay={dataAosDelay}
+      >
         {children}
         <h1 className="font-semibold mt-2">{title}</h1>
         <p className="m-3 text-center">{description}</p>

@@ -1,9 +1,20 @@
 import PropTypes from "prop-types";
 
-export const AnotherMissionAndValuesSection = ({ title, text, src, alt }) => {
+export const SecondMissionAndValuesSection = ({
+  title,
+  text,
+  src,
+  alt,
+  dataAos,
+  dataAosDelay,
+}) => {
   return (
     <>
-      <section className="font-merriWeather flex flex-col lg:flex-row items-center justify-center gap-10 py-8 px-6 sm:px-12 md:px-24 lg:px-32">
+      <section
+        className="font-merriWeather flex flex-col lg:flex-row items-center justify-center gap-10 py-8 px-6 sm:px-12 md:px-24 lg:px-32"
+        data-aos={dataAos}
+        data-aos-delay={dataAosDelay}
+      >
         <img
           src={src}
           alt={alt}
@@ -22,9 +33,11 @@ export const AnotherMissionAndValuesSection = ({ title, text, src, alt }) => {
   );
 };
 
-AnotherMissionAndValuesSection.propTypes = {
+SecondMissionAndValuesSection.propTypes = {
   title: PropTypes.string,
   text: PropTypes.string,
   src: PropTypes.string,
   alt: PropTypes.func,
+  dataAos: PropTypes.string,
+  dataAosDelay: PropTypes.string,
 };
