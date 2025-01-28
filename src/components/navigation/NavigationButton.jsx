@@ -6,7 +6,7 @@ const NavigationButton = ({ path, onClick, children }) => {
       <Link
         to={path}
         onClick={onClick}
-        className="p-2 font-josefin hover:scale-110 cursor-pointer text-white text-sm"
+        className="p-2 font-josefin transform transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer text-white text-sm"
       >
         {children}
       </Link>

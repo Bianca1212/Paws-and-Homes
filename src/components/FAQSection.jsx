@@ -26,27 +26,9 @@ export const FAQSection = ({ name, faqData }) => {
         onClick={toggleFAQSection}
       >
         {isSectionOpen ? (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="#000000"
-            width="25px"
-            height="25px"
-            viewBox="0 0 32 32"
-            version="1.1"
-          >
-            <path d="M16 0c8.844 0 16 7.156 16 16s-7.156 16-16 16-16-7.156-16-16 7.156-16 16-16zM16 30.031c7.719 0 14-6.313 14-14.031s-6.281-14-14-14-14 6.281-14 14 6.281 14.031 14 14.031zM14.906 17h-5.906c-0.563 0-1-0.438-1-1s0.438-1 1-1h14c0.563 0 1 0.438 1 1s-0.438 1-1 1h-8.094z" />
-          </svg>
+          <img src="src\assets\minus-circle.svg" alt="Minus-Circle" />
         ) : (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="#000000"
-            width="25px"
-            height="25px"
-            viewBox="0 0 32 32"
-            version="1.1"
-          >
-            <path d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM23 15h-6v-6c0-0.552-0.448-1-1-1s-1 0.448-1 1v6h-6c-0.552 0-1 0.448-1 1s0.448 1 1 1h6v6c0 0.552 0.448 1 1 1s1-0.448 1-1v-6h6c0.552 0 1-0.448 1-1s-0.448-1-1-1z" />
-          </svg>
+          <img src="src\assets\plus-circle.svg" alt="Plus-Circle" />
         )}
 
         <p className="text-xl font-semibold hover:scale-110 font-merriWeather text-gray-900">
@@ -54,7 +36,7 @@ export const FAQSection = ({ name, faqData }) => {
         </p>
       </div>
       {isSectionOpen && (
-        <div className="mx-8 my-3">
+        <div className="mx-8 my-2">
           {faqData.map((item, index) => (
             <div key={index}>
               <div className="flex items-center justify-between p-2 cursor-pointer">
@@ -67,8 +49,12 @@ export const FAQSection = ({ name, faqData }) => {
                 </Button>
               </div>
               {activeIndex === index && (
-                <div className="bg-columbiaBlue p-2 mt-2 rounded-lg half-width-center">
-                  <div className="font-merriWeather">{item.answer}</div>
+                <div className="flex items-center justify-center min-h-xs">
+                  <div className="bg-columbiaBlue p-6 rounded-lg max-w-xl w-full my-2">
+                    <div className="font-merriWeather text-center">
+                      <p>{item.answer}</p>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>

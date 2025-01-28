@@ -48,7 +48,7 @@ export const HomePage = () => {
           </p>
           <Button
             path={"/appointment"}
-            className="bg-pennBlue hover:bg-camel p-3 text-white font-semibold my-5 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
+            className="bg-pennBlue hover:bg-midnightGreen p-3 text-white font-semibold my-5 transform transition-all duration-300 ease-in-out hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
           >
             MAKE AN APPOINTMENT
           </Button>
@@ -116,10 +116,11 @@ export const HomePage = () => {
           src={"./images/about-team.jpg"}
           alt={"Doctor-and-Dog"}
           dataAos={"fade-right"}
+          dataAosDelay={"900"}
         >
           <Button
             path={"/team"}
-            className="font-merriWeather bg-pennBlue hover:bg-midnightGreen  p-3 text-white font-semibold mt-5 mb-10 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
+            className="font-merriWeather bg-pennBlue hover:bg-midnightGreen p-3 text-white font-semibold mt-5 mb-10 transform transition-all duration-300 ease-in-out hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
           >
             SEE MORE
           </Button>
@@ -135,7 +136,7 @@ export const HomePage = () => {
         >
           <Button
             path={"/adoptions"}
-            className="font-merriWeather bg-pennBlue hover:bg-midnightGreen  p-3 text-white font-semibold mt-5 mb-10 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
+            className="font-merriWeather bg-pennBlue hover:bg-midnightGreen p-3 text-white font-semibold mt-5 mb-10 transform transition-all duration-300 ease-in-out hover:scale-105 shadow-lg hover:shadow-xl rounded-lg"
           >
             SEE MORE
           </Button>

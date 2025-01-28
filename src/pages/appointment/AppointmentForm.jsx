@@ -181,7 +181,7 @@ export const AppointmentForm = () => {
     <>
       <NavigationLayout>
         <div className="w-full h-screen bg-columbiaBlue relative">
-          <div className="px-5 md:w-2/3 md:h-auto bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 flex flex-row gap-5 items-center rounded-md shadow-lg">
+          <div className="p-12 md:w-2/3 md:h-auto bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 flex flex-row gap-5 items-center rounded-md shadow-lg">
             <img
               src="./images/form-img.jpg"
               alt="Vision"
