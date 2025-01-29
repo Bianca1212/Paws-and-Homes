@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTeamMembers } from "../../hooks/useTeamMembers";
 import { NavigationLayout } from "../../layouts/NavigationLayout";
 import { Member } from "./Member";
+import { FooterLayout } from "../../layouts/FooterLayout";
 
 export const Team = () => {
   const { teamMembers } = useTeamMembers();
@@ -89,6 +90,7 @@ export const Team = () => {
           )}
         </div>
       </div>
+      <FooterLayout />
     </NavigationLayout>
   );
 };

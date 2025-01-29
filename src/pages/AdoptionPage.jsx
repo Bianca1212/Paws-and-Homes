@@ -6,6 +6,7 @@ import { SecondPresentationSection } from "../components/SecondPresentationSecti
 import { NavigationLayout } from "../layouts/NavigationLayout";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FooterLayout } from "../layouts/FooterLayout";
 
 export const AdoptionPage = () => {
   useEffect(() => {
@@ -87,6 +88,7 @@ export const AdoptionPage = () => {
             </Button>
           </SecondPresentationSection>
         </div>
+        <FooterLayout />
       </NavigationLayout>
     </>
   );

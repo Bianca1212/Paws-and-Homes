@@ -2,6 +2,7 @@ import { Button } from "../../components/Button";
 import { ContactDiv } from "./ContactDiv";
 import { SignInInput } from "../../components/sign-in/SignInInput";
 import { NavigationLayout } from "../../layouts/NavigationLayout";
+import { FooterLayout } from "../../layouts/FooterLayout";
 
 export const ContactPage = () => {
   return (
@@ -28,36 +29,7 @@ export const ContactPage = () => {
           </Button>
         </section>
 
-        {/* Contact Section */}
-        <section className="mt-10 py-4 flex flex-col gap-10 justify-around items-center bg-gray-300 font-merriWeather">
-          <h2 className="text-xl sm:text-2xl text-gray-800">
-            Contact Information
-          </h2>
-          <div className="flex flex-col lg:flex-row gap-20">
-            <ContactDiv>
-              <img src="src\assets\phone.svg" alt="Phone" />
-              <p className="font-semibold">Phone Number</p>
-              <p className="text-gray-800">(555) 123-4567</p>
-            </ContactDiv>
-            <ContactDiv>
-              <img src="src\assets\email.svg" alt="Email" />
-              <p className="font-semibold">Email</p>
-              <p className="text-gray-800">paws&homes@gmail.com</p>
-            </ContactDiv>
-            <ContactDiv>
-              <img src="src\assets\location.svg" alt="Location" />
-              <p className="font-semibold">Location</p>
-              <p className="text-gray-800">1234 Pet Lane</p>
-              <p className="text-gray-800">Suite 101 Hometown, AN 54321</p>
-            </ContactDiv>
-            <ContactDiv>
-              <img src="src\assets\clock.svg" alt="Clock" />
-              <p className="font-semibold">Working Hours</p>
-              <p className="text-gray-800">Monday to Saturday</p>
-              <p className="text-gray-800">09:00 AM To 09:00 PM</p>
-            </ContactDiv>
-          </div>
-        </section>
+        <FooterLayout />
       </NavigationLayout>
     </>
   );

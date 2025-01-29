@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FirstPresentationSection } from "../components/FirstPresentationSection";
 import { SecondPresentationSection } from "../components/SecondPresentationSection";
+import { FooterLayout } from "../layouts/FooterLayout";
 
 export const HomePage = () => {
   useEffect(() => {
@@ -141,20 +142,7 @@ export const HomePage = () => {
             SEE MORE
           </Button>
         </SecondPresentationSection>
-
-        <section className="font-merriWeather flex items-center justify-end">
-          <div className="flex flex-col items-center justify-center gap-4 mx-10 my-4">
-            <h1 className="mt-2 text-xl sm:text-2xl font-semibold drop-shadow-md">
-              COME VISIT US
-            </h1>
-            <p className="text-center w-full text-gray-800">
-              <strong>Address:</strong> Paws & Homes Veterinary Clinic
-              <br /> 1234 Pet Lane,
-              <br /> Suite 101 Hometown, AN 54321 <br />
-              <strong>Phone Number:</strong> (555) 123-4567
-            </p>
-          </div>
-        </section>
+        <FooterLayout />
       </NavigationLayout>
     </>
   );

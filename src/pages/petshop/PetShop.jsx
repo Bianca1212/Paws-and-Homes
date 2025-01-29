@@ -1,5 +1,6 @@
 import { PetShopSection } from "../../pages/petshop/PetShopSection";
 import { NavigationLayout } from "../../layouts/NavigationLayout";
+import { FooterLayout } from "../../layouts/FooterLayout";
 
 export const PetShop = () => {
   return (
@@ -19,6 +20,7 @@ export const PetShop = () => {
             path={"/e-shop/toys"}
           />
         </div>
+        <FooterLayout />
       </NavigationLayout>
     </>
   );

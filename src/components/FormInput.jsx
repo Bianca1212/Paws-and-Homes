@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+// import { useState } from "react";
 
 export const FormInput = ({
   type,
@@ -6,6 +7,7 @@ export const FormInput = ({
   placeholder,
   value,
   onChange,
+  className,
   error,
 }) => {
   return (
@@ -16,7 +18,7 @@ export const FormInput = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="font-merriWeather w-80 h-10 sm:w-96 sm:h-14 p-4 cursor-pointer border-2 border-gray-500 border-midnightGreen text-center rounded-md placeholder:text-midnightGreen transform transition-all duration-300 ease-in-out hover:scale-105"
+        className={className}
       />
       {error && <span className="text-red-500 text-sm">{error}</span>}
     </>
@@ -29,5 +31,6 @@ FormInput.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
+  className: PropTypes.string,
   error: PropTypes.string,
 };

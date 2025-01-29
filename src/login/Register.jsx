@@ -80,6 +80,7 @@ export const Register = () => {
             placeholder={"Username"}
             value={values.name}
             onChange={handleChange}
+            className="font-merriWeather w-80 h-10 sm:w-96 sm:h-14 p-4 cursor-pointer border-2 border-gray-500 border-midnightGreen text-center rounded-md placeholder:text-midnightGreen transform transition-all duration-300 ease-in-out hover:scale-105"
             error={errors.name}
           />
           <FormInput
@@ -88,6 +89,7 @@ export const Register = () => {
             placeholder={"Email address"}
             value={values.email}
             onChange={handleChange}
+            className="font-merriWeather w-80 h-10 sm:w-96 sm:h-14 p-4 cursor-pointer border-2 border-gray-500 border-midnightGreen text-center rounded-md placeholder:text-midnightGreen transform transition-all duration-300 ease-in-out hover:scale-105"
             error={errors.email}
           />
           <FormInput
@@ -96,6 +98,7 @@ export const Register = () => {
             placeholder={"Age"}
             value={values.age}
             onChange={handleChange}
+            className="font-merriWeather w-80 h-10 sm:w-96 sm:h-14 p-4 cursor-pointer border-2 border-gray-500 border-midnightGreen text-center rounded-md placeholder:text-midnightGreen transform transition-all duration-300 ease-in-out hover:scale-105"
             error={errors.age}
           />
           <FormInput
@@ -104,6 +107,7 @@ export const Register = () => {
             placeholder={"Password"}
             value={values.password}
             onChange={handleChange}
+            className="font-merriWeather w-80 h-10 sm:w-96 sm:h-14 p-4 cursor-pointer border-2 border-gray-500 border-midnightGreen text-center rounded-md placeholder:text-midnightGreen transform transition-all duration-300 ease-in-out hover:scale-105"
             error={errors.password}
           />
           <FormInput
@@ -112,6 +116,7 @@ export const Register = () => {
             placeholder={"Rewrite password"}
             value={values.verifyPassword}
             onChange={handleChange}
+            className="font-merriWeather w-80 h-10 sm:w-96 sm:h-14 p-4 cursor-pointer border-2 border-gray-500 border-midnightGreen text-center rounded-md placeholder:text-midnightGreen transform transition-all duration-300 ease-in-out hover:scale-105"
             error={errors.verifyPassword}
           />
           <Button

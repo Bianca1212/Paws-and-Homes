@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FirstMissionAndValuesSection } from "../../pages/missionAndValues/FirstMisionAndValuesSection";
 import { SecondMissionAndValuesSection } from "../../pages/missionAndValues/SecondMissionAnValuesSection";
+import { FooterLayout } from "../../layouts/FooterLayout";
 
 export const MissionAndValues = () => {
   useEffect(() => {
@@ -67,6 +68,7 @@ export const MissionAndValues = () => {
             dataAosDelay={"700"}
           />
         </div>
+        <FooterLayout />
       </NavigationLayout>
     </>
   );

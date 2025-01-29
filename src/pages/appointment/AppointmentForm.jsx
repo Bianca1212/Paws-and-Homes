@@ -6,6 +6,7 @@ import { FormInput } from "../../components/FormInput";
 import { FormSelect } from "../../components/FormSelect";
 import { Calendar } from "../../pages/appointment/Calendar";
 import axios from "axios";
+import { FooterLayout } from "../../layouts/FooterLayout";
 
 export const AppointmentForm = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -199,12 +200,9 @@ export const AppointmentForm = () => {
                     placeholder={"Owner's First Name"}
                     value={values.firstName}
                     onChange={handleChange}
+                    className="w-44 h-8 sm:w-74 sm:h-14 p-3 cursor-pointer border-2 border-gray-500 text-center rounded-md placeholder:text-gray-500 text-base leading-normal"
+                    error={errors.firstName}
                   />
-                  {errors.firstName && (
-                    <p className="text-red-500 text-center">
-                      {errors.firstName}
-                    </p>
-                  )}
                 </div>
                 <div className="flex flex-col">
                   <FormInput
@@ -213,12 +211,9 @@ export const AppointmentForm = () => {
                     placeholder={"Owner's Last Name"}
                     value={values.lastName}
                     onChange={handleChange}
+                    className="w-44 h-8 sm:w-74 sm:h-14 p-3 cursor-pointer border-2 border-gray-500 text-center rounded-md placeholder:text-gray-500 text-base leading-normal"
+                    error={errors.lastName}
                   />
-                  {errors.lastName && (
-                    <p className="text-red-500 text-center">
-                      {errors.lastName}
-                    </p>
-                  )}
                 </div>
 
                 <FormInput
@@ -227,6 +222,7 @@ export const AppointmentForm = () => {
                   placeholder={"Pets's Name"}
                   value={values.petName}
                   onChange={handleChange}
+                  className="w-44 h-8 sm:w-74 sm:h-14 p-3 cursor-pointer border-2 border-gray-500 text-center rounded-md placeholder:text-gray-500 text-base leading-normal"
                 />
                 <div className="flex flex-col">
                   <FormInput
@@ -235,10 +231,9 @@ export const AppointmentForm = () => {
                     placeholder={"Pets's Age"}
                     value={values.petAge}
                     onChange={handleChange}
+                    className=" w-44 h-8 sm:w-74 sm:h-14 p-3 cursor-pointer border-2 border-gray-500 text-center rounded-md placeholder:text-gray-500 text-base leading-normal"
+                    error={errors.petAge}
                   />
-                  {errors.petAge && (
-                    <p className="text-red-500 text-center">{errors.petAge}</p>
-                  )}
                 </div>
                 <div className="flex flex-col">
                   <FormSelect
@@ -383,6 +378,7 @@ export const AppointmentForm = () => {
             </div>
           </div>
         </div>
+        <FooterLayout />
       </NavigationLayout>
     </>
   );

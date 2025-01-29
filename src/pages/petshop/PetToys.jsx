@@ -1,4 +1,5 @@
 import { usePetToys } from "../../hooks/usePetToys";
+import { FooterLayout } from "../../layouts/FooterLayout";
 import { NavigationLayout } from "../../layouts/NavigationLayout";
 import { Category } from "./Category";
 
@@ -22,6 +23,7 @@ export const PetToys = () => {
             <p className="text-center col-span-full">No food available.</p>
           )}
         </section>
+        <FooterLayout />
       </NavigationLayout>
     </>
   );

@@ -1,5 +1,6 @@
 import { FAQSection } from "../../pages/faq/FAQSection";
 import { NavigationLayout } from "../../layouts/NavigationLayout";
+import { FooterLayout } from "../../layouts/FooterLayout";
 
 export const FAQPage = () => {
   return (
@@ -217,6 +218,7 @@ export const FAQPage = () => {
             ]}
           />
         </section>
+        <FooterLayout />
       </NavigationLayout>
     </>
   );

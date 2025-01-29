@@ -2,6 +2,7 @@ import { useState } from "react";
 import { usePetFood } from "../../hooks/usePetFood";
 import { NavigationLayout } from "../../layouts/NavigationLayout";
 import { Category } from "./Category";
+import { FooterLayout } from "../../layouts/FooterLayout";
 
 export const PetFood = () => {
   const { petFood } = usePetFood();
@@ -103,6 +104,7 @@ export const PetFood = () => {
           <p className="text-center col-span-full">No food available.</p>
         )}
       </section>
+      <FooterLayout />
     </NavigationLayout>
   );
 };
