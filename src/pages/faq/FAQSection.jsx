@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { FaSortUp, FaSortDown } from "react-icons/fa";
-import { Button } from "./Button";
+import { Button } from "../../components/Button";
 
 export const FAQSection = ({ name, faqData }) => {
   const [isSectionOpen, setIsSectionOpen] = useState(false);

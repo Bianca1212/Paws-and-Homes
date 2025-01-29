@@ -38,6 +38,6 @@ SecondPresentationSection.propTypes = {
   description: PropTypes.string,
   src: PropTypes.string,
   alt: PropTypes.string,
-  children: PropTypes.obj,
+  children: PropTypes.object,
   dataAos: PropTypes.string,
 };

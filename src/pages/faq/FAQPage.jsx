@@ -1,4 +1,4 @@
-import { FAQSection } from "../../components/FAQSection";
+import { FAQSection } from "../../pages/faq/FAQSection";
 import { NavigationLayout } from "../../layouts/NavigationLayout";
 
 export const FAQPage = () => {

@@ -1,4 +1,4 @@
-import { PetShopSection } from "../../components/PetShopSection";
+import { PetShopSection } from "../../pages/petshop/PetShopSection";
 import { NavigationLayout } from "../../layouts/NavigationLayout";
 
 export const PetShop = () => {

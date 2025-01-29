@@ -1,4 +1,4 @@
-import { Button } from "./Button";
+import { Button } from "../../components/Button";
 import PropTypes from "prop-types";
 
 export const PetShopSection = ({ title, src, alt, path }) => {

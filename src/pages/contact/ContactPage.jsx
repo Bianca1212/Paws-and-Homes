@@ -1,5 +1,5 @@
 import { Button } from "../../components/Button";
-import { ContactDiv } from "../../components/ContactDiv";
+import { ContactDiv } from "./ContactDiv";
 import { SignInInput } from "../../components/sign-in/SignInInput";
 import { NavigationLayout } from "../../layouts/NavigationLayout";
 
@@ -7,11 +7,11 @@ export const ContactPage = () => {
   return (
     <>
       <NavigationLayout>
-        <section className="flex flex-col gap-5 items-center py-4 text-pennBlue">
+        <section className="flex flex-col gap-5 items-center py-4 text-pennBlue font-merriWeather">
           <h1 className="mt-10 text-2xl sm:text-3xl font-semibold text-center drop-shadow-md">
             CONTACT US
           </h1>
-          <p className="m-8 md:m-0 mt-8 text-xl sm:text-2xl font-josefin font-semibold text-center drop-shadow-md">
+          <p className="m-8 md:m-0 mt-8 text-xl sm:text-2xl font-semibold text-center drop-shadow-md">
             Any questions or remarks? Just write us a message!
           </p>
           <div className="flex flex-col gap-10 justify-center">
@@ -29,7 +29,7 @@ export const ContactPage = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="mt-10 py-4 flex flex-col gap-10 justify-around items-center bg-gray-300">
+        <section className="mt-10 py-4 flex flex-col gap-10 justify-around items-center bg-gray-300 font-merriWeather">
           <h2 className="text-xl sm:text-2xl text-gray-800">
             Contact Information
           </h2>

@@ -15,5 +15,5 @@ Button.propTypes = {
   path: PropTypes.string,
   className: PropTypes.string,
   onClick: PropTypes.func,
-  children: PropTypes.object,
+  children: PropTypes.string,
 };

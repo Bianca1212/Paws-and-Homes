@@ -1,22 +1,15 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { Button } from "../components/Button";
-import { SignInSection } from "../components/sign-in/SignInSection";
+// import { SignInSection } from "../components/sign-in/SignInSection";
 import { Link } from "react-router-dom";
 import Breadcrumbs from "../components/BreadCrumbs";
 import { Navigation } from "../components/navigation/Navigation";
+import { useAuth } from "../context/AuthContext";
 
 export const NavigationLayout = ({ children }) => {
-  const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleSignIn = () => {
-    setIsSignInModalOpen(!isSignInModalOpen);
-  };
-
-  const closeSignInModal = () => {
-    setIsSignInModalOpen(false);
-  };
+  const { user, logout } = useAuth();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -48,7 +41,7 @@ export const NavigationLayout = ({ children }) => {
                 {isMobileMenuOpen ? "X" : "☰"}
               </Button>
 
-              <div className="w-25 md:w-30 flex flex-row gap-2 mr-10 cursor-pointer bg-midnightGreen p-2 rounded-full transform transition-all duration-300 ease-in-out hover:scale-105 md:flex items-center">
+              <div className="w-25 md:w-30 flex flex-row mr-10 cursor-pointer bg-midnightGreen rounded-full p-2 transform transition-all duration-300 ease-in-out hover:scale-105 md:flex items-center">
                 <svg
                   fill="currentColor"
                   viewBox="0 0 16 16"
@@ -58,18 +51,27 @@ export const NavigationLayout = ({ children }) => {
                 >
                   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" />
                 </svg>
-                <Button
-                  className="whitespace-nowrap text-white text-sm md:text-lg font-merriWeather "
-                  onClick={toggleSignIn}
-                >
-                  SIGN IN
-                </Button>
+
+                <ul>
+                  {user ? (
+                    <div className="font-semibold font-merriWeather text-white">
+                      <Button
+                        onClick={logout}
+                        className="flex items-center gap-2 text-white px-4 py-2 rounded-full"
+                      >
+                        {user.email}
+                      </Button>
+                    </div>
+                  ) : (
+                    <li className="font-semibold font-merriWeather text-white text-sm">
+                      <Link to="/login">LOGIN</Link>
+                    </li>
+                  )}
+                </ul>
               </div>
             </div>
           </div>
         </div>
-
-        {isSignInModalOpen && <SignInSection onClick={closeSignInModal} />}
 
         {/* Navigation for mobile (hamburger menu) */}
         <div
@@ -92,7 +94,7 @@ export const NavigationLayout = ({ children }) => {
 };
 
 NavigationLayout.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.array,
   menuItems: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,

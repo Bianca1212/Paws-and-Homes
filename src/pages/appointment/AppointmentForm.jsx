@@ -4,7 +4,7 @@ import { NavigationLayout } from "../../layouts/NavigationLayout";
 import { useForm } from "../../hooks/useForm";
 import { FormInput } from "../../components/FormInput";
 import { FormSelect } from "../../components/FormSelect";
-import { Calendar } from "../../components/Calendar";
+import { Calendar } from "../../pages/appointment/Calendar";
 import axios from "axios";
 
 export const AppointmentForm = () => {
@@ -48,25 +48,25 @@ export const AppointmentForm = () => {
   const validateForm = () => {
     const newErrors = {};
     if (!values.firstName) {
-      newErrors.firstName = "First Name is required!";
+      newErrors.firstName = "First Name is required";
     }
     if (!values.lastName) {
-      newErrors.lastName = "Last Name is required!";
+      newErrors.lastName = "Last Name is required";
     }
     if (!values.petAge) {
-      newErrors.petAge = "Pet's Age is required!";
+      newErrors.petAge = "Pet's Age is required";
     }
     if (!values.petType) {
-      newErrors.petType = "Pet's Type is required!";
+      newErrors.petType = "Pet's Type is required";
     }
     if (!values.petGender) {
-      newErrors.petGender = "Pet's Gender is required!";
+      newErrors.petGender = "Pet's Gender is required";
     }
     if (!values.appointmentReason) {
-      newErrors.appointmentReason = "Reason is required!";
+      newErrors.appointmentReason = "Reason is required";
     }
     if (!selectedDate) {
-      newErrors.selectedDate = "Please select a date and a time!";
+      newErrors.selectedDate = "Please select a date and a time";
     }
 
     return newErrors;
