@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { NavigationLayout } from "../../../layouts/NavigationLayout";
+import { NavigationLayout } from "../../layouts/NavigationLayout";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FirstMissionAndValuesSection } from "../../../pages/about/missionAndValues/FirstMisionAndValuesSection";
-import { SecondMissionAndValuesSection } from "../../../pages/about/missionAndValues/SecondMissionAnValuesSection";
+import { FirstMissionAndValuesSection } from "../../pages/missionAndValues/FirstMisionAndValuesSection";
+import { SecondMissionAndValuesSection } from "../../pages/missionAndValues/SecondMissionAnValuesSection";
 
 export const MissionAndValues = () => {
   useEffect(() => {

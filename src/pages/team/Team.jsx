@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useTeamMembers } from "../../../hooks/useTeamMembers";
-import { NavigationLayout } from "../../../layouts/NavigationLayout";
+import { useTeamMembers } from "../../hooks/useTeamMembers";
+import { NavigationLayout } from "../../layouts/NavigationLayout";
 import { Member } from "./Member";
 
 export const Team = () => {

@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { Button } from "../../components/Button";
-import { PresentationCard } from "../../components/PresentationCard";
-import { NavigationLayout } from "../../layouts/NavigationLayout";
+import { Button } from "../components/Button";
+import { PresentationCard } from "../components/PresentationCard";
+import { NavigationLayout } from "../layouts/NavigationLayout";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FirstPresentationSection } from "../../components/FirstPresentationSection";
-import { SecondPresentationSection } from "../../components/SecondPresentationSection";
+import { FirstPresentationSection } from "../components/FirstPresentationSection";
+import { SecondPresentationSection } from "../components/SecondPresentationSection";
 
 export const HomePage = () => {
   useEffect(() => {

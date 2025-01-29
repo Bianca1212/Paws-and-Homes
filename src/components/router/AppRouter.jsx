@@ -1,18 +1,18 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { HomePage } from "../../pages/home/HomePage";
-import { AdoptionPage } from "../../pages/adoption/AdoptionPage";
+import { HomePage } from "../../pages/HomePage";
+import { AdoptionPage } from "../../pages/AdoptionPage";
 import { ContactPage } from "../../pages/contact/ContactPage";
-import { MissionAndValues } from "../../pages/about/missionAndValues/MissionAndValues";
+import { MissionAndValues } from "../../pages/missionAndValues/MissionAndValues";
 import { AppointmentForm } from "../../pages/appointment/AppointmentForm";
 import { FAQPage } from "../../pages/faq/FAQPage";
 import { PetShop } from "../../pages/petshop/PetShop";
-import { Team } from "../../pages/about/team/Team";
+import { Team } from "../../pages/team/Team";
 import { PetFood } from "../../pages/petshop/PetFood";
 import { PetToys } from "../../pages/petshop/PetToys";
 import { LoggedIn } from "../../login/LoggedIn";
 import { Register } from "../../login/Register";
 import { ProtectedRoute } from "../../login/ProtectedRoute";
-import { LogInSection } from "../../login/LogInSection";
+import { LoginSection } from "../../login/LoginSection";
 
 export const AppRouter = () => {
   const router = createBrowserRouter([
@@ -20,7 +20,7 @@ export const AppRouter = () => {
       path: "/login",
       element: (
         <LoggedIn>
-          <LogInSection />
+          <LoginSection />
         </LoggedIn>
       ),
     },

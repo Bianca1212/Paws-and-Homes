@@ -5,7 +5,7 @@ import { Button } from "../components/Button";
 import { FormInput } from "../components/FormInput";
 import { NavigationLayout } from "../layouts/NavigationLayout";
 
-export const LogInSection = () => {
+export const LoginSection = () => {
   const [errors, setErrors] = useState([]);
   const { values, handleChange } = useForm({
     email: "",

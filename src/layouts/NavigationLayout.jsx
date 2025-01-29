@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { Button } from "../components/Button";
-// import { SignInSection } from "../components/sign-in/SignInSection";
 import { Link } from "react-router-dom";
 import Breadcrumbs from "../components/BreadCrumbs";
 import { Navigation } from "../components/navigation/Navigation";

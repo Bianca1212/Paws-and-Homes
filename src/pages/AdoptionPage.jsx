@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { Button } from "../../components/Button";
-import { FirstPresentationSection } from "../../components/FirstPresentationSection";
-import { PresentationCard } from "../../components/PresentationCard";
-import { SecondPresentationSection } from "../../components/SecondPresentationSection";
-import { NavigationLayout } from "../../layouts/NavigationLayout";
+import { Button } from "../components/Button";
+import { FirstPresentationSection } from "../components/FirstPresentationSection";
+import { PresentationCard } from "../components/PresentationCard";
+import { SecondPresentationSection } from "../components/SecondPresentationSection";
+import { NavigationLayout } from "../layouts/NavigationLayout";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
